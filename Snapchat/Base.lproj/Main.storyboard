@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3a9-2Q-cCw">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="adam@undergalaxie.com" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3a9-2Q-cCw">
                                 <rect key="frame" x="87" y="114" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="kk5-Pq-ucz"/>
@@ -48,6 +48,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qs0-ww-0YY">
                                 <rect key="frame" x="160" y="204" width="55" height="30"/>
                                 <state key="normal" title="Turn Up"/>
+                                <connections>
+                                    <action selector="turnUpTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ygo-kv-DFy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -65,12 +68,55 @@
                     <connections>
                         <outlet property="emailTextfield" destination="3a9-2Q-cCw" id="h3l-gi-hIH"/>
                         <outlet property="passwordTextfield" destination="JJf-N8-VB1" id="95L-qr-pYK"/>
-                        <outlet property="turnUpTapped" destination="Qs0-ww-0YY" id="KgK-zV-5Jn"/>
+                        <segue destination="79X-SS-myJ" kind="presentation" identifier="signinsegue" id="MVK-3e-HNy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="111.99400299850076"/>
+        </scene>
+        <!--Snaps View Controller-->
+        <scene sceneID="Fcj-R6-6vM">
+            <objects>
+                <viewController id="NLF-rh-qoD" customClass="SnapsViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ke3-kN-ckh"/>
+                        <viewControllerLayoutGuide type="bottom" id="ThJ-2s-tbr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xm4-Ch-a7s">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3fd-XF-rX5">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="eez-Qf-7wn">
+                            <connections>
+                                <action selector="logoutTapped:" destination="NLF-rh-qoD" id="K3g-nP-yvh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tWt-Ca-Fwi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1948" y="105.69715142428787"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Pgy-Ce-z4d">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="79X-SS-myJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5q2-6e-s0k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="NLF-rh-qoD" kind="relationship" relationship="rootViewController" id="AC7-q4-VRM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7hC-OF-1XK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1008.8" y="105.69715142428787"/>
         </scene>
     </scenes>
 </document>

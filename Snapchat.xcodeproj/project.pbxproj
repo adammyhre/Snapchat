@@ -13,7 +13,8 @@
 		C299B81D20B75FA40056EB13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C299B81B20B75FA40056EB13 /* Main.storyboard */; };
 		C299B81F20B75FA40056EB13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C299B81E20B75FA40056EB13 /* Assets.xcassets */; };
 		C299B82220B75FA40056EB13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C299B82020B75FA40056EB13 /* LaunchScreen.storyboard */; };
-		C299B82A20B765970056EB13 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C299B82920B765970056EB13 /* GoogleService-Info.plist */; };
+		C299B82C20B86FA30056EB13 /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C299B82B20B86FA30056EB13 /* SnapsViewController.swift */; };
+		C299B82E20B87CFF0056EB13 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C299B82D20B87CFF0056EB13 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +27,8 @@
 		C299B81E20B75FA40056EB13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C299B82120B75FA40056EB13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C299B82320B75FA40056EB13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C299B82920B765970056EB13 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C299B82B20B86FA30056EB13 /* SnapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapsViewController.swift; sourceTree = "<group>"; };
+		C299B82D20B87CFF0056EB13 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C69B9DB80CADA152ACCD1811 /* Pods-Snapchat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapchat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Snapchat/Pods-Snapchat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,11 +75,12 @@
 			children = (
 				C299B81720B75FA40056EB13 /* AppDelegate.swift */,
 				C299B81920B75FA40056EB13 /* SignInViewController.swift */,
+				C299B82B20B86FA30056EB13 /* SnapsViewController.swift */,
 				C299B81B20B75FA40056EB13 /* Main.storyboard */,
 				C299B81E20B75FA40056EB13 /* Assets.xcassets */,
 				C299B82020B75FA40056EB13 /* LaunchScreen.storyboard */,
 				C299B82320B75FA40056EB13 /* Info.plist */,
-				C299B82920B765970056EB13 /* GoogleService-Info.plist */,
+				C299B82D20B87CFF0056EB13 /* GoogleService-Info.plist */,
 			);
 			path = Snapchat;
 			sourceTree = "<group>";
@@ -154,7 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C299B82220B75FA40056EB13 /* LaunchScreen.storyboard in Resources */,
-				C299B82A20B765970056EB13 /* GoogleService-Info.plist in Resources */,
+				C299B82E20B87CFF0056EB13 /* GoogleService-Info.plist in Resources */,
 				C299B81F20B75FA40056EB13 /* Assets.xcassets in Resources */,
 				C299B81D20B75FA40056EB13 /* Main.storyboard in Resources */,
 			);
@@ -170,12 +173,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Snapchat/Pods-Snapchat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,6 +217,7 @@
 			files = (
 				C299B81A20B75FA40056EB13 /* SignInViewController.swift in Sources */,
 				C299B81820B75FA40056EB13 /* AppDelegate.swift in Sources */,
+				C299B82C20B86FA30056EB13 /* SnapsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
